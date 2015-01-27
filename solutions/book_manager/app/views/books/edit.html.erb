@@ -1,0 +1,45 @@
+<div class="small-container">
+	<h1>Book Manager</h1>
+
+	<div>
+		<a href="/" class="btn btn-primary">Back</a>
+	</div>
+</div>
+
+<div class="small-container margin-top-20">
+	<div class="well">
+		<%= form_tag("/edit/" + params[:id], method: :put) do %>
+		<div class="bold">
+			Title
+		</div>
+		<div class="margin-top-20">
+			<input name="title" type="text" class="form-control" value="<%= @book.title %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Author
+		</div>
+		<div class="margin-top-20">
+			<input name="author" type="text" class="form-control" value="<%= @book.author %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Genre
+		</div>
+		<div class="margin-top-20">
+			<input name="genre" type="text" class="form-control" value="<%= @book.genre %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Pages
+		</div>
+		<div class="margin-top-20">
+			<input name="pages" type="text" class="form-control" value="<%= @book.pages %>" />
+		</div>
+		<div class="margin-top-20 txt-right">
+			<a href="/" class="btn btn-default">Cancel</a>
+			<button type="submit" class="btn btn-primary">Edit Book</button>
+		</div>
+		<% end %>
+		<%= form_tag("/delete/" + params[:id], method: :delete) do %>
+			<button type="submit" class="btn btn-danger">Delete Book</button>
+		<% end %>
+	</div>
+</div>

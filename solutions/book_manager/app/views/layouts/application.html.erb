@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookManager</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+  <style>
+		.bold {
+			font-weight:bold;
+		}
+
+		.margin-top-20 {
+			margin-top:20px;
+		}
+
+		.small-container {
+			width:700px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		.txt-right {
+			text-align:right;
+		}
+	</style>
+</head>
+<body>
+
+<%= yield %>
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
