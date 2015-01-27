@@ -209,6 +209,11 @@ end
 
 ##Model Associations
 
-
-
-##Routing Resources
+##Chirp! Lab - The Next Big Thang
+Chirp! is the newest social network that brings together all of the coolest aspects of socializing. Your mission should you choose to accept it is as follows:
+- Use the files in the `chirp_html` folder as your frontend.
+- Create a brand new Rails project that will take the input from the chirp textarea and save it as a chirp in the database.
+- Create edit and delete functionality for the chirps.
+- Each chirp shown should display a randomly chosen bird.
+- Application should have at least two models - chirp and user, and should have authentication.
+- Bonus: Practice using validations on both models.
