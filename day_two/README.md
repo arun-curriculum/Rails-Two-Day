@@ -171,8 +171,7 @@ for all of these validations you can pass in an error message of - :message => "
 #### Using validation methods
 
 - Before you even start - think and ask yourself what should I validate?
-- Add the validations after your associations in the model
-- in rails console you can run s.valid? to see if it's valid and then s.errors to see what's wrong if there is a problem.
+- Add the validations after your associations in the model.
 
 #### Validates Method
 
@@ -208,6 +207,53 @@ end
 ```
 
 ##Model Associations
+- Associations allow us to create relationships between sets of data.
+- For example, let's say we had two models - owners and pets. The association between pets and owners is that owners have many pets.
+- Associations are handled in the model:
+
+####One to many
+
+owner.rb
+
+```
+has_many :pets
+```
+
+pet.rb
+
+```
+belongs_to :owner
+```
+
+- Now you can accomplish things like `Owner.find(1).pets` to find all pets associated with the owner with an ID of 1.
+
+####Many to many
+- Often times your data relationship will be a many to many relationship if both sets relate to multiple records in each other.
+- For example, let's say we have a user model, an event model, and our application allows multiple users to have various events, and different events to have many users associated with them.
+- Rails makes this association simple by a "join" table that links to two together.
+
+user.rb
+
+```
+has_many :events, through: :rsvps
+has_many :rsvps
+```
+
+event.rb
+
+```
+has_many :users, through: :rsvps
+has_many :rsvps
+```
+
+rsvp.rb
+- This third model acts as a bridge between the two models.
+- This model will have two attributes: user_id and event_id.
+
+```
+belongs_to :user
+belongs_to :event
+```
 
 ##Chirp! Lab - The Next Big Thang
 Chirp! is the newest social network that brings together all of the coolest aspects of socializing. Your mission should you choose to accept it is as follows:
