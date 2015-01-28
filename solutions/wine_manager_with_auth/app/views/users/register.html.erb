@@ -1,0 +1,29 @@
+<div class="container well margin-top-20 small-container">
+	<%= form_tag do %>
+		<div>
+			<a href="/login"><< Go Back</a>
+		</div>
+		<div class="bold margin-top-20">
+			Name
+		</div>
+		<div class="margin-top-20">
+			<input name="name" type="text" class="form-control" />
+		</div>
+		<div class="bold margin-top-20">
+			Username
+		</div>
+		<div class="margin-top-20">
+			<input name="username" type="text" class="form-control" />
+		</div>
+		<div class="bold margin-top-20">
+			Password
+		</div>
+		<div class="margin-top-20">
+			<input name="password" type="password" class="form-control" />
+		</div>
+		<div class="margin-top-20">
+			<a href="/login" class="btn btn-default">Cancel</a>
+			<button type="submit" class="btn btn-success">Register</button>
+		</div>
+	<% end %>
+</div>

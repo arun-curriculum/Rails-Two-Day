@@ -1,0 +1,64 @@
+<div class="container well margin-top-20 small-container">
+	<%= form_tag(wines_edit_path(params[:id]), method: :put) do %>
+		<div>
+			<a href="/"><< Go Back</a>
+		</div>
+		<div class="bold margin-top-20">
+			Name
+		</div>
+		<div class="margin-top-20">
+			<input name="name" type="text" class="form-control" value="<%= @wine['name'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Year
+		</div>
+		<div class="margin-top-20">
+			<input name="year" type="text" class="form-control" value="<%= @wine['year'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Grapes
+		</div>
+		<div class="margin-top-20">
+			<input name="grapes" type="text" class="form-control" value="<%= @wine['grapes'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Country
+		</div>
+		<div class="margin-top-20">
+			<input name="country" type="text" class="form-control" value="<%= @wine['country'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Region
+		</div>
+		<div class="margin-top-20">
+			<input name="region" type="text" class="form-control" value="<%= @wine['region'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Price
+		</div>
+		<div class="margin-top-20">
+			<input name="price" type="text" class="form-control" value="<%= @wine['price'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Picture
+		</div>
+		<div class="margin-top-20">
+			<input name="picture" type="text" class="form-control" value="<%= @wine['picture'] %>" />
+		</div>
+		<div class="bold margin-top-20">
+			Description
+		</div>
+		<div class="margin-top-20">
+			<textarea name="description" class="form-control"><%= @wine['description'] %></textarea>
+		</div>
+		<div class="margin-top-20">
+			<a href="/" class="btn btn-default">Cancel</a>
+			<button type="submit" class="btn btn-success">Submit Edits</button>
+		</div>
+	<% end %>
+	<%= form_tag("/delete/" + params[:id], method: :delete) do %>
+		<div class="margin-top-20">
+			<button type="submit" class="btn btn-danger">Delete Wine</button>
+		</div>
+	<% end %>
+</div>
