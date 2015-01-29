@@ -14,8 +14,9 @@
 - Asset Pipeline
 
 ###[Day 2](day_two/)
-- Model associations
+- Web Requests
 - Authentication
-- Using gems
-- RESTful resources
-- Deployment to Heroku
+- Validations
+- Model Associations
+- Authentication
+- Using Gems
